@@ -59,6 +59,9 @@ Clean and properly formatted output using printf
 Simple and extendable codebase
 
 **Architecture Diagram**
+## Architecture Diagram
+
+```
 ┌───────────────────────────┐
 │        User Input         │
 │ (Principal, Rate, Years)  │
@@ -67,16 +70,21 @@ Simple and extendable codebase
                 ▼
 ┌───────────────────────────┐
 │ Compound Interest Logic   │
-│ Using Math.pow()          │
+│        (Math.pow)         │
 └───────────────┬───────────┘
                 │
                 ▼
 ┌───────────────────────────┐
-│      Final Output         │
-│ (Formatted Amount Value)  │
+│       Final Output        │
+│  (Formatted Amount Value) │
 └───────────────────────────┘
+```
+
 
 **Compound Interest Growth Diagram**
+## Compound Interest Growth Diagram
+
+```
 Principal
   │
   │           ***************
@@ -84,6 +92,7 @@ Principal
   │      **                     ****
   │   ***                         *****
   │**************************************** Time →
+```
 
 **Formula**
 
@@ -112,10 +121,15 @@ the # of years: 10
 the amount after 10 years is $10,115.66
 
 **Project Structure**
+## Project Structure
+
+```
 /compound-interest-calculator
 │── MiniProject1.java
 │── README.md
-│── .gitignore (optional)
+│── .gitignore   (optional)
+```
+
 
 **How to Run**
 1. Compile the program:
