@@ -9,15 +9,7 @@ A console-based Java program that calculates the accumulated investment amount u
 
 `A = P × (1 + r/n)^(n × t)`
 
-Where:
-
-- `P` is the initial principal.
-- `r` is the annual interest rate expressed as a decimal.
-- `n` is the number of compounding periods per year.
-- `t` is the duration in years.
-- `A` is the calculated final amount.
-
-The program converts the percentage input to a decimal and uses `Math.pow()` to calculate the exponential term.
+Where `P` is principal, `r` is the annual interest rate as a decimal, `n` is compounding periods per year, `t` is time in years, and `A` is the final amount. The program converts the percentage input to a decimal and uses `Math.pow()`.
 
 ## Project Structure
 
@@ -30,19 +22,9 @@ compound-interest-calculator/
 
 ## Requirements
 
-- JDK installed.
-- A terminal or command prompt.
-
-Verify your Java installation:
-
-```bash
-java -version
-javac -version
-```
+Install a JDK and ensure `java` and `javac` are available in your terminal.
 
 ## Compile and Run
-
-From the project directory:
 
 ```bash
 javac MiniProject1.java
@@ -56,16 +38,12 @@ Enter the principal, annual rate in percent, number of compounding periods per y
 - Reading numeric input with `Scanner`.
 - Converting a percentage to a decimal rate.
 - Using `Math.pow()` for exponentiation.
-- Formatting numeric results with `printf`.
+- Formatting results with `printf`.
 
 ## Limitations and Improvements
 
-- Input validation is not implemented. Values such as zero compounding periods can cause invalid calculations.
-- The program uses `double`; it is a learning exercise, not a financial or tax calculator.
-- Add validation for negative values and zero compounding frequency.
-- Consider `BigDecimal` and rounding rules if adapting the program for financial use.
-- Add automated tests for known example values.
+Input validation is not implemented. Zero compounding periods can cause invalid calculations, and negative values are not rejected. This is a learning exercise, not a financial or tax calculator. Potential improvements include validation, currency-safe arithmetic with `BigDecimal`, and automated tests.
 
 ## License
 
-Licensed under the MIT License. See [LICENSE](LICENSE) for the full text.
+Licensed under the MIT License. See [LICENSE](LICENSE) for details.
