@@ -1,163 +1,71 @@
-**Compound Interest Calculator (Java)**
+# Compound Interest Calculator (Java)
 
+[![Language](https://img.shields.io/badge/Language-Java-orange.svg)](https://www.java.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+A console-based Java program that calculates the accumulated investment amount using a compound-interest formula. The user enters a principal amount, annual interest rate, compounding frequency, and investment duration.
 
+## Formula
 
-
-
-
-
-A simple and efficient Java console application that computes the future value of an investment using compound interest.
-This project demonstrates user input handling, mathematical computation, formatted output, and clean Java fundamentals.
-
-**Table of Contents**
-
-Overview
-
-Features
-
-Architecture Diagram
-
-Compound Interest Growth Diagram
-
-Formula
-
-Example Output
-
-Project Structure
-
-How to Run
-
-Future Enhancements
-
-License
-
-**Overview**
-
-This is a beginner-friendly Java mini-project that calculates the accumulated amount on a principal investment using the compound interest formula:
-
-Accepts investment parameters interactively
-
-Performs rapid interest calculations
-
-Uses Math.pow() for exponential computation
-
-Outputs the result in a clean, currency-formatted style
-
-It is ideal for beginners learning Java fundamentals, CLI programs, and mathematical logic.
-
-**Features**
-
-Console-based interactive input
-
-Well-structured variable usage
-
-Compound interest calculation using exponential mathematics
-
-Clean and properly formatted output using printf
-
-Simple and extendable codebase
-
-**Architecture Diagram**
-## Architecture Diagram
-
-```
-┌───────────────────────────┐
-│        User Input         │
-│ (Principal, Rate, Years)  │
-└───────────────┬───────────┘
-                │
-                ▼
-┌───────────────────────────┐
-│ Compound Interest Logic   │
-│        (Math.pow)         │
-└───────────────┬───────────┘
-                │
-                ▼
-┌───────────────────────────┐
-│       Final Output        │
-│  (Formatted Amount Value) │
-└───────────────────────────┘
-```
-
-
-**Compound Interest Growth Diagram**
-## Compound Interest Growth Diagram
-
-```
-Principal
-  │
-  │           ***************
-  │        ***               ****
-  │      **                     ****
-  │   ***                         *****
-  │**************************************** Time →
-```
-
-**Formula**
-
-The application uses the standard compound interest formula:
-
-A = P * (1 + r/n)^(n * t)
-
+`A = P × (1 + r/n)^(n × t)`
 
 Where:
 
-P = Principal
+- `P` is the initial principal.
+- `r` is the annual interest rate expressed as a decimal.
+- `n` is the number of compounding periods per year.
+- `t` is the duration in years.
+- `A` is the calculated final amount.
 
-r = Annual interest rate (decimal)
+The program converts the percentage input to a decimal and uses `Math.pow()` to calculate the exponential term.
 
-n = Number of compounding periods per year
-
-t = Time in years
-
-A = Final amount
-
-Example Output
-principal amount: 5000
-the rate of interest (in %): 7
-the # of times interest is compounded per year: 12
-the # of years: 10
-the amount after 10 years is $10,115.66
-
-**Project Structure**
 ## Project Structure
 
-```
-/compound-interest-calculator
-│── MiniProject1.java
-│── README.md
-│── .gitignore   (optional)
+```text
+compound-interest-calculator/
+├── MiniProject1.java
+├── README.md
+└── LICENSE
 ```
 
+## Requirements
 
-**How to Run**
-1. Compile the program:
+- JDK installed.
+- A terminal or command prompt.
+
+Verify your Java installation:
+
+```bash
+java -version
+javac -version
+```
+
+## Compile and Run
+
+From the project directory:
+
+```bash
 javac MiniProject1.java
-
-2. Run it:
 java MiniProject1
+```
 
-3. Clone from GitHub (if viewing as user):
-git clone https://github.com/your-username/compound-interest-calculator.git
+Enter the principal, annual rate in percent, number of compounding periods per year, and number of years when prompted. The result is printed with two decimal places.
 
-**Future Enhancements**
+## Learning Outcomes
 
-Add input validation
+- Reading numeric input with `Scanner`.
+- Converting a percentage to a decimal rate.
+- Using `Math.pow()` for exponentiation.
+- Formatting numeric results with `printf`.
 
-Add support for recurring monthly deposits (SIP model)
+## Limitations and Improvements
 
-Build a GUI version (JavaFX / Swing)
+- Input validation is not implemented. Values such as zero compounding periods can cause invalid calculations.
+- The program uses `double`; it is a learning exercise, not a financial or tax calculator.
+- Add validation for negative values and zero compounding frequency.
+- Consider `BigDecimal` and rounding rules if adapting the program for financial use.
+- Add automated tests for known example values.
 
-Convert to OOP structure (InterestCalculator class)
+## License
 
-Build a Spring Boot REST API
-
-Add JUnit test cases
-
-Add charts for growth visualization
-
-**License**
-
-This repository is licensed under the MIT License.
-Free to use, modify, and distribute.
+Licensed under the MIT License. See [LICENSE](LICENSE) for the full text.
